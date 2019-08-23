@@ -1,0 +1,36 @@
+{
+  "name": "DHT-based P2P Comment Service",
+  "short_name" : "DPCS",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "P2P Comment Service",
+   "icons": {"128": "images/get_started.png",
+  			  "48": "images/get_started.png",
+			  "32": "images/get_started.png",
+  			  "16": "images/get_started.png" },
+  "homepage_url": "https://loozlooz.com",
+  "content_scripts": [
+    {
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["content.js"]
+    }
+   ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+ },
+  "browser_action": {
+    "default_title": "Comment Service",
+     "default_icon": {"128": "images/get_started.png",
+					  "48": "images/get_started.png",
+					  "32": "images/get_started.png",
+					  "16": "images/get_started.png" }
+  },
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs",
+    "activeTab"
+  ]
+}
